@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="main_title">Lots of great plush toys!</h1>
+<hr>
+
+<img class="product_img" src="{{url_for('static', filename='plush_pics/baby_yoda.jpg')}}">
+<a class="pru" href="{{url_for('product', product_id=plush_1, product_type=plushies)}}">Baby Yoda Plush Toy</a>
+<h2> $35.00 </h2>
+
+<img class="product_img" src="{{url_for('static', filename='plush_pics/dumpster.jpg')}}">
+<a class="pru" href="{{url_for('product', product_id=plush_2, product_type=plushies)}}">Dumpster Fire Plush Toy</a>
+<h2> $35.00 </h2>
+
+<img class="product_img" src="{{url_for('static', filename='plush_pics/fat_seal.jpg')}}">
+<a class="pru" href="{{url_for('product', product_id=plush_3, product_type=plushies)}}">Fat Seal Plush Toy</a>
+<h2> $35.00 </h2>
+
+<img class="product_img" src="{{url_for('static', filename='plush_pics/grumpy_cat.jpg')}}">
+<a class="pru" href="{{url_for('product', product_id=plush_4, product_type=plushies)}}">Grumpy Cat Plush Toy</a>
+<h2> $35.00 </h2>
+
+<img class="product_img" src="{{url_for('static', filename='plush_pics/jesus.jpg')}}">
+<a class="pru" href="{{url_for('product', product_id=plush_5, product_type=plushies)}}">Jesus Plush Toy</a>
+<h2> $35.00 </h2>
+
+<img class="product_img" src="{{url_for('static', filename='plush_pics/mike_meyers.jpg')}}">
+<a class="pru" href="{{url_for('product', product_id=plush_6, product_type=plushies)}}">Mike Meyers Plush Toy</a>
+<h2> $35.00 </h2>
+
+<img class="product_img" src="{{url_for('static', filename='plush_pics/octo_baby.jpg')}}">
+<a class="pru" href="{{url_for('product', product_id=plush_7, product_type=plushies)}}">Octo Baby Plush Toy</a>
+<h2> $35.00 </h2>
+
+<img class="product_img" src="{{url_for('static', filename='plush_pics/pickle_rick.jpg')}}">
+<a class="pru" href="{{url_for('product', product_id=plush_8, product_type=plushies)}}">Pickle Rick Plush Toy</a>
+<h2> $35.00 </h2>
+
+<img class="product_img" src="{{url_for('static', filename='plush_pics/plague_doc.jpg')}}">
+<a class="pru" href="{{url_for('product', product_id=plush_9, product_type=plushies)}}">Plague Doctor Plush Toy</a>
+<h2> $35.00 </h2>
+
+<img class="product_img" src="{{url_for('static', filename='plush_pics/shrimp.jpg')}}">
+<a class="pru" href="{{url_for('product', product_id=plush_10, product_type=plushies)}}">Shrimp Plush Toy</a>
+<h2> $35.00 </h2>
+
+
+
+{% endblock %}
