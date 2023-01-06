@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="main_title">My Shopping Cart</h1>
+
+<div class="product_container">
+{% for item in cart: %}
+<div class="product_card">
+<img class="product_img" src="{{ item.item.img_url }}">
+<a class="pru" href="{{url_for('product', product_id=item, product_type=apparels)}}"> {{ item.item.product_title }}</a>
+<a class="pru" href="{{url_for('product', product_id=item, product_type=apparels)}}"> {{ item.item.product_price }} </a>
+    <a class="pru" href="{{url_for('product', product_id=item, product_type=apparels)}}"> Quantity: {{ item.quantity }} </a>
+</div>
+{% endfor %}
+</div>
+
+<h1 class="total_price"> Total: ${{subtotal}}</h1>
+<form method="get" action="/checkout">
+    <input class="checkout_button" type="submit" value="Checkout">
+</form>
+
+
+
+{% endblock %}

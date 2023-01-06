@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="main_title">Lots of great plush toys!</h1>
+<hr>
+
+<div class="product_container">
+{% for plush in plush_toyz: %}
+<div class="product_card">
+<img class="product_img" src="{{ plush.img_url }}">
+<a class="small_product_title" href="{{url_for('product', product_id=plush.id) }}"> {{plush.product_title}}</a>
+<a class="small_product_price" href="{{url_for('product', product_id=plush.id) }}"> {{ plush.product_price }} </a>
+</div>
+
+{% endfor %}
+</div>
+
+
+
+{% endblock %}

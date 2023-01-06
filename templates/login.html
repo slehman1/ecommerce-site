@@ -1,0 +1,32 @@
+{% extends 'base.html' %}}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+    <h1 class="main_title">Login!</h1>
+    <div class="form_div">
+
+         {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+        <form action="/login" method="post">
+            <input type="text" placeholder="Username" autofocus name="username">
+            <br>
+            <input type="password" placeholder="Password"  name="password">
+            <br>
+            <input type="submit" value="Login">
+
+        </form>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="main_title">Welcome to the Store!</h1>
+<hr>
+<div>
+    <h1 class="store_title">Top Selling Plush Toys</h1>
+    <div class="product_container">
+    {% for plush in plushiez: %}
+    <div class="product_card">
+    <img class="product_img" src="{{ plush.img_url }}">
+    <a class="pru" href="{{url_for('product', product_id=plush.id, product_type=plushies)}}"> {{ plush.product_title }}</a>
+    <a class="pru" href="{{url_for('product', product_id=plush.id, product_type=plushies)}}"> {{ plush.product_price }} </a>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+
+<div>
+    <hr>
+    <h1 class="store_title">Top Selling Posters</h1>
+    <div class="product_container">
+
+    {% for poster in posterz: %}
+    <div class="product_card">
+    <img class="product_img" src="{{ poster.img_url }}">
+    <a class="pru" href="{{url_for('product', product_id=poster.id, product_type=posters)}}"> {{ poster.product_title }}</a>
+    <a class="pru" href="{{url_for('product', product_id=poster.id, product_type=posters)}}"> {{ poster.product_price }} </a>
+    </div>
+    {% endfor %}
+    </div>
+</div>
+
+    <hr>
+    <h1 class="store_title">Top Selling Apparel</h1>
+<div class="product_container">
+    {% for apparel in apparelz: %}
+    <div class="product_card">
+    <img class="product_img" src="{{ apparel.img_url }}">
+    <a class="pru" href="{{url_for('product', product_id=apparel.id, product_type=apparels)}}"> {{ apparel.product_title }}</a>
+    <a class="pru" href="{{url_for('product', product_id=apparel.id, product_type=apparels)}}"> {{ apparel.product_price }} </a>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+
+{% endblock %}

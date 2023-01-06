@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="home_div">
+<h1 class="main_title">Welcome Home!</h1>
+ {% if order: %}
+<h1 class="main_title">Your order has been submitted. Thank you!</h1>
+ <h1 class="main_title">Products will arrive in 1-2 years.</h1>
+{% endif %}
+
+ </div>
+
+
+
+
+{% endblock %}

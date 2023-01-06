@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="main_title">Lots of great posters!</h1>
+<hr>
+
+<div class="product_container">
+{% for poster in posterz: %}
+<div class="product_card">
+<img class="product_img" src="{{ poster.img_url }}">
+<a class="small_product_title" href="{{url_for('product', product_id=poster.id)}}"> {{ poster.product_title }}</a>
+<a class="small_product_title" href="{{url_for('product', product_id=poster.id)}}"> {{ poster.product_price }} </a>
+</div>
+
+{% endfor %}
+</div>
+
+
+
+{% endblock %}

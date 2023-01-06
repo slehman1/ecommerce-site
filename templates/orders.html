@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="main_title">Order History</h1>
+
+<div class="product_container">
+{% for item in orders %}
+<div class="product_card">
+<img class="product_img" src="{{ item.item.img_url }}">
+<a class="pru" href="{{url_for('product', product_id=item.item.id )}}"> {{ item.item.product_title }}</a>
+<span> {{ item.item.product_price }} </span>
+    <span> Quantity: {{ item.quantity }} </span>
+    <span>Purchased on: {{ item.purchase_date_date }} </span>
+</div>
+{% endfor %}
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+    <h1 class="main_title">Give me the money!</h1>
+    <div class="form_div">
+        <form action="/checkout" method="post">
+            <input type="text" placeholder="Card Number" autofocus name="card-num">
+            <br>
+            <input type="text" placeholder="Name on Card"  name="card-name">
+            <br>
+            <input type="text" placeholder="Expiration Date"  name="expir-date">
+            <br>
+            <input type="text" placeholder="Security Code"  name="security-code">
+            <br>
+            <input type="submit" value="Complete Purchase">
+
+        </form>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="main_title">Lots of great apparel items!</h1>
+<hr>
+
+<div class="product_container">
+{% for apparel in apparels: %}
+<div class="product_card">
+<img class="product_img" src="{{ apparel.img_url }}">
+<a class="small_product_title" href="{{url_for('product', product_id=apparel.id) }}"> {{ apparel.product_title }}</a>
+<a class="small_product_price" href="{{url_for('product', product_id=apparel.id) }}"> {{ apparel.product_price }} </a>
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock %}
